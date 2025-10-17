@@ -9,7 +9,7 @@ OPTION(BOARD_BLACKBOX_X32 "Compile for BlackBox X32" OFF)
 OPTION(Ethernet "Compile with Ethernet support" OFF)
 
 # Add my_plugin.c to compilation, add my_plugin.c to the main folder first
-OPTION(AddMyPlugin "Add my_plugin.c" OFF)
+OPTION(AddMyPlugin "Add my_plugin.c" ON)
 
 # --- Do not change anything below unless you understand what you are doing ---
 
