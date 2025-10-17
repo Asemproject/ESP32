@@ -160,8 +160,8 @@ typedef struct {
   #include "boards/jackpot_map.h"
 #elif defined(BOARD_BTT_RODENT)
   #include "boards/btt_rodent_map.h"
-#elif defined(BOARD_MY_MACHINE)
-  #include "boards/my_machine_map.h"
+#elif defined(BOARD_WENOS_ESP32)
+  #include "boards/Wemos_esp32_map.h"
 #elif defined(BOARD_GENERIC_S3)
   #include "boards/generic_s3_map.h"
 #elif defined(BOARD_GENERIC_I2S_S3)
