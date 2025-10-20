@@ -164,8 +164,8 @@ typedef struct {
   #include "boards/my_machine_map.h"
 #elif defined(BOARD_GENERIC_S3)
   #include "boards/generic_s3_map.h"
-#elif defined(BOARD_GENERIC_I2S_S3)
-  #include "boards/generic_i2s_s3_map.h"
+#elif defined(BOARD_ESPDUINO_32_WEMOS_D1_R32_UNO)
+  #include "boards/espduino_32_wemos_d1_r32_map.h"
 #else // default board - NOTE: NOT FINAL VERSION!
  #ifndef WEB_BUILD
   #warning "Compiling for generic board!"
