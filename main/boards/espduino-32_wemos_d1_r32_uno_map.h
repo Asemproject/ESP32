@@ -1,7 +1,7 @@
 /*
   espduino-32_wemos_d1_r32_uno_map.h - An embedded CNC Controller with rs274/ngc (g-code) support
 
-  Driver code for ESP32
+  Driver code for ESPDUINO_32_WEMOS_D1_R32_UNO
 
   Part of grblHAL
 
