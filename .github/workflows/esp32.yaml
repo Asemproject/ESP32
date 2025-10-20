@@ -14,9 +14,9 @@ jobs:
       with:
         entrypoint: /opt/esp/entrypoint.sh
         args: bash -c "idf.py build"
-    - name: Upload all build binaries
-  uses: actions/upload-artifact@v4
-  with:
+    - name: Upload the build binaries
+      uses: actions/upload-artifact@v4
+      with:
     name: grblhal-esp32-binaries
     path: |
       build/grbl.bin
