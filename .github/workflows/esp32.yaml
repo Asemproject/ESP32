@@ -1,24 +1,31 @@
-name: 'Build for ESP32'
+name: Build for ESP32
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-      with:
-        submodules: recursive
-    - name: Build grblHAL
-      uses: docker://espressif/idf:release-v4.3
-      with:
-        entrypoint: /opt/esp/entrypoint.sh
-        args: bash -c "idf.py build"
-    - name: Upload the build binaries
-      uses: actions/upload-artifact@v4
-      with:
-    name: grblhal-esp32-binaries
-    path: |
-      build/grbl.bin
-      build/bootloader/bootloader.bin
-      build/partition_table/partition-table.bin
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Build grblHAL (in ESP-IDF Docker)
+        uses: docker://espressif/idf:release-v4.3
+        with:
+          # entrypoint wajib sesuai image espressif
+          entrypoint: /opt/esp/entrypoint.sh
+          # jalankan build; -l untuk bash yang lebih aman dengan quoting
+          args: bash -lc "idf.py build"
+
+      - name: Upload build binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-binaries
+          path: |
+            build/grbl.bin
+            build/bootloader/bootloader.bin
+            build/partition_table/partition-table.bin
