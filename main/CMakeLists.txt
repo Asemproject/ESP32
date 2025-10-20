@@ -2,7 +2,7 @@
 
 # Enable these boards here and not in my_machine.h if you want to override board specific default core options.
 # NOTE: if reflashing/updating these options will not be changed, use $RST=$ to propagate them.
-OPTION(BOARD_BLACKBOX_X32 "Compile for BlackBox X32" OFF)
+OPTION(BOARD_BLACKBOX_X32 "Compile for ESPDUINO_32_WEMOS_D1_R32" ON)
 
 # WiFi vs. Ethernet support
  # Do not enable unless having a board that supports it!
@@ -294,7 +294,7 @@ target_add_binary_data("${COMPONENT_LIB}" "embedded/favicon.ico" BINARY)
 target_add_binary_data("${COMPONENT_LIB}" "embedded/ap_login.html" BINARY)
 target_add_binary_data("${COMPONENT_LIB}" "embedded/index.html.gz" BINARY)
 
-unset(BOARD_BLACKBOX_X32 CACHE)
+unset(BOARD_ESPDUINO_32_WEMOS_D1_R32 CACHE)
 unset(Ethernet CACHE)
 unset(AddMyPlugin CACHE)
 
