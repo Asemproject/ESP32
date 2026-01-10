@@ -40,28 +40,26 @@
 #define BOARD_NAME "ESPDUINO-32 Wemos D1 R32"
 
 // Define step pulse output pins.
-#define X_STEP_PIN          GPIO_NUM_26
-#define Y_STEP_PIN          GPIO_NUM_25
-#define Z_STEP_PIN          GPIO_NUM_17
+#define X_STEP_PIN          GPIO_NUM_12
+#define Y_STEP_PIN          GPIO_NUM_27
+#define Z_STEP_PIN          GPIO_NUM_25
 
 // Define step direction output pins. NOTE: All direction pins must be on the same port.
-#define X_DIRECTION_PIN     GPIO_NUM_16
-#define Y_DIRECTION_PIN     GPIO_NUM_27
-#define Z_DIRECTION_PIN     GPIO_NUM_14
+#define X_DIRECTION_PIN     GPIO_NUM_14
+#define Y_DIRECTION_PIN     GPIO_NUM_26
+#define Z_DIRECTION_PIN     GPIO_NUM_33
 
 // Define stepper driver enable/disable output pin(s).
-#define STEPPERS_ENABLE_PIN GPIO_NUM_12
+#define STEPPERS_ENABLE_PIN GPIO_NUM_32
 
 // Define homing/hard limit switch input pins and limit interrupt vectors.
-#define X_LIMIT_PIN         GPIO_NUM_13
-#define Y_LIMIT_PIN         GPIO_NUM_5
-#define Z_LIMIT_PIN         GPIO_NUM_23
+#define X_LIMIT_PIN         GPIO_NUM_17
+#define Y_LIMIT_PIN         GPIO_NUM_16
+#define Z_LIMIT_PIN         GPIO_NUM_4
 
 #define AUXOUTPUT0_PIN      GPIO_NUM_19 // Spindle PWM
 #define AUXOUTPUT1_PIN      GPIO_NUM_18 // Spindle enable
 #if !(MODBUS_ENABLE & MODBUS_RTU_ENABLED)
-#define AUXOUTPUT2_PIN      GPIO_NUM_32 // Coolant flood
-#endif
 
 // Define driver spindle pins
 #if DRIVER_SPINDLE_ENABLE & SPINDLE_PWM
@@ -90,9 +88,6 @@
 #endif
 
 #define AUXINPUT0_PIN       GPIO_NUM_39 // Probe
-#define AUXINPUT1_PIN       GPIO_NUM_2  // Reset/EStop
-#define AUXINPUT2_PIN       GPIO_NUM_4  // Feed hold
-#define AUXINPUT3_PIN       GPIO_NUM_35 // Cycle start
 
 // Define user-control controls (cycle start, reset, feed hold) input pins.
 #if CONTROL_ENABLE & CONTROL_HALT
