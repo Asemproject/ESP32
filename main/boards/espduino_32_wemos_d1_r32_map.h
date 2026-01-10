@@ -104,10 +104,6 @@
 #define PROBE_PIN           AUXINPUT0_PIN
 #endif
 
-#ifdef ADD_SERIAL1
-#define SERIAL1_PORT
-#define UART1_RX_PIN            GPIO_NUM_33
-#define UART1_TX_PIN            GPIO_NUM_32
 #if MODBUS_ENABLE & MODBUS_RTU_DIR_ENABLED
 #define MODBUS_DIRECTION_PIN    GPIO_NUM_15
 #endif
