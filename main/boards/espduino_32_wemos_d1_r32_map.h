@@ -17,15 +17,15 @@
 
 // Define step pulse output pins.
 // FluidNC: X Step: gpio.2, Y Step: gpio.16, Z Step: gpio.25
-#define X_STEP_PIN          GPIO_NUM_2
-#define Y_STEP_PIN          GPIO_NUM_16
-#define Z_STEP_PIN          GPIO_NUM_25
+#define X_STEP_PIN          GPIO_NUM_12
+#define Y_STEP_PIN          GPIO_NUM_33
+#define Z_STEP_PIN          GPIO_NUM_26
 
 // Define step direction output pins.
 // FluidNC: X Dir: gpio.15, Y Dir: gpio.17, Z Dir: gpio.26
-#define X_DIRECTION_PIN     GPIO_NUM_15
-#define Y_DIRECTION_PIN     GPIO_NUM_17
-#define Z_DIRECTION_PIN     GPIO_NUM_26
+#define X_DIRECTION_PIN     GPIO_NUM_14
+#define Y_DIRECTION_PIN     GPIO_NUM_27
+#define Z_DIRECTION_PIN     GPIO_NUM_15
 
 // Define stepper driver enable/disable output pin(s).
 // FluidNC: shared_stepper_disable_pin: gpio.13
@@ -37,9 +37,9 @@
 
 // Define homing/hard limit switch input pins.
 // FluidNC: X Limit: gpio.27, Y Limit: gpio.14, Z Limit: gpio.4
-#define X_LIMIT_PIN         GPIO_NUM_27
-#define Y_LIMIT_PIN         GPIO_NUM_14
-#define Z_LIMIT_PIN         GPIO_NUM_4
+#define X_LIMIT_PIN         GPIO_NUM_17
+#define Y_LIMIT_PIN         GPIO_NUM_4
+#define Z_LIMIT_PIN         GPIO_NUM_16
 
 // -------------------------------------------------------------------------
 // SPINDLE / COOLANT / PROBE (AUX I/O)
@@ -54,10 +54,10 @@
 */
 
 // #define SPINDLE_PWM_PIN     GPIO_NUM_NC
-// #define SPINDLE_ENABLE_PIN  GPIO_NUM_NC
+#define SPINDLE_ENABLE_PIN  GPIO_NUM_22
 // #define COOLANT_FLOOD_PIN   GPIO_NUM_NC
 // #define COOLANT_MIST_PIN    GPIO_NUM_NC
-// #define PROBE_PIN           GPIO_NUM_NC
+#define PROBE_PIN           GPIO_NUM_32
 
 // -------------------------------------------------------------------------
 // SD CARD / SPI PINS
@@ -71,7 +71,7 @@
 #define SPI_MOSI_PIN        GPIO_NUM_23
 #define SPI_SCK_PIN         GPIO_NUM_18
 #define SD_CS_PIN           GPIO_NUM_5
-#define SD_CD_PIN           GPIO_NUM_35 
+//#define SD_CD_PIN           GPIO_NUM_nc 
 #endif
 
 // -------------------------------------------------------------------------
