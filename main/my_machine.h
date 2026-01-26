@@ -86,7 +86,7 @@
 //#define LASER_COOLANT_ENABLE    1 // Laser coolant plugin. To be completed.
 //#define LB_CLUSTERS_ENABLE      1 // LaserBurn cluster support.
 //#define LASER_OVD_ENABLE        1
-#define OPENPNP_ENABLE          1 // OpenPNP plugin. To be completed.
+//#define OPENPNP_ENABLE          1 // OpenPNP plugin. To be completed.
 //#define FANS_ENABLE             1 // Enable fan control via M106/M107. Enables fans plugin.
 //#define EMBROIDERY_ENABLE       1 // Embroidery plugin. To be completed.
 //#define TRINAMIC_ENABLE      2130 // Trinamic TMC2130 stepper driver support. NOTE: work in progress.
