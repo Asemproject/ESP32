@@ -59,7 +59,7 @@
 // If none are specified the default PWM spindle is instantiated.
 // Spindle definitions can be found in grbl/spindle_control.h.
 // More here https://github.com/grblHAL/Plugins_spindle
-//#define SPINDLE0_ENABLE         SPINDLE_HUANYANG1
+#define SPINDLE0_ENABLE         SPINDLE_ON/OFF
 //#define SPINDLE1_ENABLE         SPINDLE_PWM0_NODIR
 //#define SPINDLE2_ENABLE         SPINDLE_NONE
 //#define SPINDLE3_ENABLE         SPINDLE_NONE
@@ -73,7 +73,7 @@
 //#define ETHERNET_ENABLE         1 // Ethernet streaming. Uses networking plugin.
 //#define BLUETOOTH_ENABLE        1 // Set to 1 for native radio, 2 for HC-05 module.
 #define SDCARD_ENABLE           1 // Run gcode programs from SD card. Set to 2 to enable YModem upload.
-//#define LITTLEFS_ENABLE         2 // Enable flash based storage, automatically enabled if WebUI is enabled. Set to 2 to mount as root.
+#define LITTLEFS_ENABLE         2 // Enable flash based storage, automatically enabled if WebUI is enabled. Set to 2 to mount as root.
 //#define MPG_ENABLE              1 // Enable MPG interface. Requires a serial stream and means to switch between normal and MPG mode.
                                     // 1: Mode switching is by handshake pin.
                                     // 2: Mode switching is by the CMD_MPG_ENABLE_TOGGLE (0x8B) command character.
@@ -86,7 +86,7 @@
 //#define LASER_COOLANT_ENABLE    1 // Laser coolant plugin. To be completed.
 //#define LB_CLUSTERS_ENABLE      1 // LaserBurn cluster support.
 //#define LASER_OVD_ENABLE        1
-//#define OPENPNP_ENABLE          1 // OpenPNP plugin. To be completed.
+#define OPENPNP_ENABLE          1 // OpenPNP plugin. To be completed.
 //#define FANS_ENABLE             1 // Enable fan control via M106/M107. Enables fans plugin.
 //#define EMBROIDERY_ENABLE       1 // Embroidery plugin. To be completed.
 //#define TRINAMIC_ENABLE      2130 // Trinamic TMC2130 stepper driver support. NOTE: work in progress.
@@ -94,7 +94,7 @@
 //#define TRINAMIC_ENABLE      5160 // Trinamic TMC5160 stepper driver support. NOTE: work in progress.
 //#define TRINAMIC_I2C            1 // Trinamic I2C - SPI bridge interface.
 //#define TRINAMIC_DEV            1 // Development mode, adds a few M-codes to aid debugging. Do not enable in production code.
-//#define EEPROM_ENABLE          16 // I2C EEPROM/FRAM support. Set to 16 for 2K, 32 for 4K, 64 for 8K, 128 for 16K and 256 for 16K capacity.
+#define EEPROM_ENABLE          256 // I2C EEPROM/FRAM support. Set to 16 for 2K, 32 for 4K, 64 for 8K, 128 for 16K and 256 for 16K capacity.
 //#define EEPROM_IS_FRAM          1 // Uncomment when EEPROM is enabled and chip is FRAM, this to remove write delay.
 //#define ESTOP_ENABLE            0 // When enabled only real-time report requests will be executed when the reset pin is asserted.
                                     // NOTE: if left commented out the default setting is determined from COMPATIBILITY_LEVEL.
